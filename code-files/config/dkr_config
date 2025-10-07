@@ -1,0 +1,39 @@
+listen 80;
+
+location /echo EchoHandler { # no arguments
+}
+
+location /static StaticFileHandler{
+  root /app/static;
+}
+
+location /static1 StaticFileHandler{
+  root /app/static1;
+}
+
+location /static2 StaticFileHandler{
+  root /app/static2;
+}
+
+location /api CrudHandler {
+    data_path /mnt/storage/crud;
+}
+
+location /health HealthHandler { 
+
+}
+
+location /sleep SleepHandler { 
+}
+  
+location /quiz QuizHandler {
+  quiz_root /app/quizzes;
+}
+
+location /quiz/submit ResultHandler {
+  quiz_root /app/quizzes;
+}
+
+location /quiz/create CreateQuizHandler {
+  quiz_root /app/quizzes;
+}

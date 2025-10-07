@@ -1,0 +1,87 @@
+{
+  "title": "What's Your Major, Based On Pure Vibes Alone?",
+  "questions": [
+    {
+      "prompt": "How do you react when your parents say they need to talk?",
+      "image": "parents.jpg",
+      "options": [
+        { "text": "Lock myself in my room and complain to my friends on Discord", "value": "computer-science" },
+        { "text": "Start cleaning my room like it's a crime scene", "value": "biology" },
+        { "text": "\"Talk about what? I didn't do anything! It was [insert sibling's name]!\"", "value": "political-science" },
+        { "text": "I'm already crying and they haven't even said anything yet", "value": "business-econ" }
+      ]
+    },
+    {
+      "prompt": "If you could have any superpower, what would it be?",
+      "image": "superpower.jpg",
+      "options": [
+        { "text": "Telekinesis", "value": "computer-science" },
+        { "text": "Immortality", "value": "business-econ" },
+        { "text": "Mindreading", "value": "political-science" },
+        { "text": "The ability to talk to animals", "value": "biology" }
+      ]
+    },
+    {
+      "prompt": "What's your investment of choice?",
+      "image": "investments.jpg",
+      "options": [
+        { "text": "Meme stocks", "value": "computer-science" },
+        { "text": "S&P 500", "value": "business-econ" },
+        { "text": "U.S. Treasury Bonds", "value": "political-science" },
+        { "text": "Too much debt to invest", "value": "biology" }
+      ]
+    },
+    {
+      "prompt": "Pick a TV show.",
+      "image": "tvshow.jpg",
+      "options": [
+        { "text": "Black Mirror", "value": "computer-science" },
+        { "text": "Shark Tank", "value": "business-econ" },
+        { "text": "Suits", "value": "political-science" },
+        { "text": "Grey's Anatomy", "value": "biology" }
+      ]
+    },
+    {
+      "prompt": "What's your red flag?",
+      "image": "red-flag.jpg",
+      "options": [
+        { "text": "Only shower once a week", "value": "computer-science" },
+        { "text": "Your favorite movie is The Wolf of Wall Street", "value": "business-econ" },
+        { "text": "Constantly arguing", "value": "political-science" },
+        { "text": "Always too busy to hang out", "value": "biology" }
+      ]
+    },
+    {
+      "prompt": "Pick a hobby.",
+      "image": "hobby.jpg",
+      "options": [
+        { "text": "Leet code", "value": "computer-science" },
+        { "text": "Day trading", "value": "business-econ" },
+        { "text": "Listening to podcasts", "value": "political-science" },
+        { "text": "Volunteering", "value": "biology" }
+      ]
+    }
+  ],
+  "results": {
+    "computer-science": {
+      "title": "You're Computer Science!",
+      "description": "You've definitely said \"it worked on my machine\" before. You thrive in chaos, communicate mostly through memes, and live off of boba. You probably haven't seen sunlight in three days, but at least your screen brightness is turned up.",
+      "image": "computer-science.jpg"
+    },
+    "business-econ": {
+      "title": "You're Business Econ!",
+      "description": "You're already networking with your cousin's friend's boss. You check your stocks more than your texts and think LinkedIn is a social media platform. You take creatine and get lunch at Chipotle every day.",
+      "image": "business-econ.jpg"
+    },
+    "political-science": {
+      "title": "You're Political Science!",
+      "description": "You're always ready to argue. You're the friend who turns a group dinner into a heated debate and you say \"devil's advocate\" a little too often. You're not scared to argue with the professor.",
+      "image": "political-science.jpg"
+    },
+    "biology": {
+      "title": "You're Biology!",
+      "description": "You're constantly stressed and worrying about your med school application. You smell a little bit like ethanol. You've probably cried in a lab coat.",
+      "image": "biology.jpg"
+    }
+  }
+}

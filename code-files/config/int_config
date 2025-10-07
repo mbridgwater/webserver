@@ -1,0 +1,12 @@
+listen 80;
+
+location /echo EchoHandler { # no arguments
+}
+
+location /static StaticFileHandler {
+  root ./tests/app;
+}
+
+location /api CrudHandler {
+    data_path /tmp/crud_test_data;
+}

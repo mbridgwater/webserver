@@ -1,0 +1,7 @@
+foo "bar";                              # comment 
+                                        # comment 
+server {                                # comment 
+  listen   80;                          # comment 
+  server_name foo.com;                  # comment 
+  root /home/ubuntu/sites/foo/;         # comment 
+}                                       # comment 

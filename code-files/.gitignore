@@ -1,0 +1,15 @@
+.DS_Store
+.vscode
+build
+build_*
+mirror
+webserver.tar
+# don't commit CMakeFiles
+# CMake build artifacts
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+logs/
+*.log
+*.log.*
+

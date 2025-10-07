@@ -1,0 +1,87 @@
+{
+  "title": "What UCLA Dining Hall Are You, Really?",
+  "questions": [
+    {
+      "prompt": "Good morning! What time are you waking up?",
+      "image": "sunrise.jpg",
+      "options": [
+        { "text": "6 AM", "value": "bplate" },
+        { "text": "8:00 AM", "value": "rende-west" },
+        { "text": "10:00 AM", "value": "epicuria" },
+        { "text": "12:00 PM", "value": "de-neve" }
+      ]
+    },
+    {
+      "prompt": "What's the plan for the morning?",
+      "image": "morning-routine.jpeg",
+      "options": [
+        { "text": "Run to Santa Monica", "value": "bplate" },
+        { "text": "Slack line on Janss", "value": "rende-west" },
+        { "text": "Visit the Getty", "value": "epicuria" },
+        { "text": "Go to Universal", "value": "de-neve" }
+      ]
+    },
+    {
+      "prompt": "All this fun is making me hungry. What snack are you grabbing?",
+      "image": "snacks.jpg",
+      "options": [
+        { "text": "Apple", "value": "bplate" },
+        { "text": "Crumpled up granola bar in bottom of bag", "value": "rende-west" },
+        { "text": "Pita chips with hummus", "value": "epicuria" },
+        { "text": "Cheetos", "value": "de-neve" }
+      ]
+    },
+    {
+      "prompt": "That's enough fun for today. Where are you studying?",
+      "image": "library.jpg",
+      "options": [
+        { "text": "Biomed Research Library", "value": "bplate" },
+        { "text": "Kerckhoff Coffee House", "value": "rende-west" },
+        { "text": "Powell Reading Room", "value": "epicuria" },
+        { "text": "YRL", "value": "de-neve" }
+      ]
+    },
+    {
+      "prompt": "Where in Westwood are you going to dinner?",
+      "image": "restaurant.jpg",
+      "options": [
+        { "text": "Sweetgreen", "value": "bplate" },
+        { "text": "Chipotle", "value": "rende-west" },
+        { "text": "Cava", "value": "epicuria" },
+        { "text": "In n Out", "value": "de-neve" }
+      ]
+    },
+    {
+      "prompt": "What's the plan for tonight?",
+      "image": "night-plans.jpeg",
+      "options": [
+        { "text": "Corepower and in bed by 10 PM", "value": "bplate" },
+        { "text": "Barneys Trivia", "value": "rende-west" },
+        { "text": "Wine night", "value": "epicuria" },
+        { "text": "Mario Kart", "value": "de-neve" }
+      ]
+    }
+  ],
+  "results": {
+    "bplate": {
+      "title": "You're B-Plate!",
+      "description": "You're on top of everything. You protect your peace and are on the board for at least 3 clubs. You wear Birkenstocks and were vegetarian for a couple years before developing an iron deficiency. You grew up in an ingredients-only household.",
+      "image": "bplate.jpg"
+    },
+    "rende-west": {
+      "title": "You're Rende West!",
+      "description": "You are super chill and go with the flow. You're always running late and are a little bit shy. You don't crave attention, but somehow everyone always wants to sit next to you. You like predictability.",
+      "image": "rende.jpg"
+    },
+    "epicuria": {
+      "title": "You're Epicuria!",
+      "description": "You like to romanticize your life and still talk about how studying abroad in Madrid was the best decision you've ever made. You are lactose intolerant but are in denial. You like being the center of attention.",
+      "image": "epicuria.jpg"
+    },
+    "de-neve": {
+      "title": "You're De Neve!",
+      "description": "Picky AF. Chaotic neutral. You don't GAF and everyone loves you for it. You drink whole milk, go to sleep at 3 AM, and have a unique meme taste. Your productivity spikes only when the stakes are life or death.",
+      "image": "denev.jpg"
+    }
+  }
+}

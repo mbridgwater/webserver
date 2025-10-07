@@ -1,0 +1,10 @@
+server {
+  listen 80;
+  location /static/ {
+    root /app/static;
+  }
+
+  location /images/ {
+    root /assets/images;
+  }
+}

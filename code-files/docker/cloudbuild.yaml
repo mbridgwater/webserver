@@ -1,0 +1,65 @@
+steps:
+  # 1) Pull the registry‑tagged base (if it already exists, for caching)
+  - id: "Pull Base"
+    name: "gcr.io/cloud-builders/docker"
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        docker pull gcr.io/$PROJECT_ID/server-ihardlyknowher-base:latest || true
+
+  # 2) Build & tag the base image (with that exact name)
+  - id: "Build Base"
+    name: "gcr.io/cloud-builders/docker"
+    args:
+      - "build"
+      - "-f"
+      - "docker/base.Dockerfile"
+      - "-t"
+      - "server-ihardlyknowher-base:latest"              # local alias
+      - "-t"
+      - "gcr.io/$PROJECT_ID/server-ihardlyknowher-base:latest"
+      - "--cache-from"
+      - "gcr.io/$PROJECT_ID/server-ihardlyknowher-base:latest"
+      - "."
+
+  # 3) Push that same tag so subsequent steps can pull it if they want
+  - id: "Push Base"
+    name: "gcr.io/cloud-builders/docker"
+    args:
+      - "push"
+      - "gcr.io/$PROJECT_ID/server-ihardlyknowher-base:latest"
+    waitFor: ["Build Base"]
+
+  # 4) Build your main app, pointing its builder stage at that image
+  - id: "Build App"
+    name: "gcr.io/cloud-builders/docker"
+    args:
+      - "build"
+      - "-f"
+      - "docker/Dockerfile"
+      - "-t"
+      - "gcr.io/$PROJECT_ID/server-ihardlyknowher:latest"
+      - "--build-arg"
+      - "PROJECT_ID=$PROJECT_ID"
+      - "."
+    waitFor: ["Push Base"]
+
+  # 5) Build coverage the same way
+  - id: "Coverage Build"
+    name: "gcr.io/cloud-builders/docker"
+    args:
+      - "build"
+      - "-f"
+      - "docker/coverage.Dockerfile"
+      - "-t"
+      - "gcr.io/$PROJECT_ID/server-ihardlyknowher-coverage:latest"
+      - "--build-arg"
+      - "PROJECT_ID=$PROJECT_ID"
+      - "."
+    waitFor: ["Push Base"]
+
+images:
+  - "gcr.io/$PROJECT_ID/server-ihardlyknowher-base:latest"
+  - "gcr.io/$PROJECT_ID/server-ihardlyknowher:latest"
+  - "gcr.io/$PROJECT_ID/server-ihardlyknowher-coverage:latest"

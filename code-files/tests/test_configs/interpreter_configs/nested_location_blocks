@@ -1,0 +1,10 @@
+server {
+  listen 80;
+  location /a/ {
+    root /docroot/a;
+
+    location /b/ {
+      root /docroot/b;
+    }
+  }
+}

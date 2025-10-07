@@ -1,0 +1,9 @@
+listen 80;
+
+location /static StaticFileHandler {
+  root ./files1;
+}
+
+location /static StaticFileHandler {
+  root ./files;
+}
